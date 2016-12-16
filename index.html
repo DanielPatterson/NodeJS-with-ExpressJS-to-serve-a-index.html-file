@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link href="bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+	<h1>Node js</h1>
+
+	<p>Basic example that uses <a href="#">ExpressJS</a> to serve a index.html file</p>
+
+	<p><b>Install ExpressJS</b><br /><i>npm install g- express</i></p>
+
+	<p><b>index.js</b><br />Save the following as <b>index.js</b></p>
+
+	<pre>
+	var express = require('express');
+	var app = express();
+	var path = require('path');
+
+	// viewed at http://localhost:8080
+	app.get('/', function(req, res) {
+	    res.sendFile(path.join(__dirname + '/index.html'));
+	});
+
+	app.listen(8080);
+	</pre>
+
+	<p><b>index.html</b><br />Create a html file named <b>index.html</b> and place in your desired content.</p>
+
+	<p><b>In command prompt</b><br />
+	Start the local host by typing the following:<br />
+	<i>node sandbox/index.js</i></p>
+
+	<p><small>sandbox is the folder that I use to house my projects. It may be a different path on your computer.<br />
+	you can try: node PathToYourProjectGoesHere/index.js</small></p>
+
+</div>
+</body>
+</html>
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script>
+$("document").ready(function () {
+	alert("ok");
+});
+</script>
